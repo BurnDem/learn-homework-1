@@ -15,13 +15,21 @@
     
 """
 
-questions_and_answers = {}
+questions_and_answers = {
+    "Как дела": "Хорошо!", 
+    "Что делаешь?": "Программирую",
+    "Какие планы": "Разные",
+    "Издеваешься": "Да",
+    "Кама - пуля": "Ежжи"
+}
 
-def ask_user(answers_dict):
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+def ask_user():
+    while True:
+        user_question = input('Введите вопрос: ')
+        for question, answer in questions_and_answers.items():
+            if question == user_question:
+                print(answer)
+   
 if __name__ == "__main__":
-    ask_user(questions_and_answers)
+    ask_user()
+# на звонке сказал, что можно сделать через несоответствие (!=) , не понял как это
